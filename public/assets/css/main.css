@@ -1,0 +1,943 @@
+/**
+* Main styles
+**/
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none;
+}
+
+body {
+    background-color: #1a1a1a;
+}
+
+body, .pure-g [class *= "pure-u"],
+.pure-g-r [class *= "pure-u"] {
+    font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.header {
+
+}
+
+.entryLink {
+    text-decoration: none;
+    color: black;
+}
+
+.entryLink:hover {
+    text-decoration: underline;
+}
+
+.center {
+    height: 100%;
+    background-color: #f5f5f5;
+    margin-right: 250px;
+}
+
+#site {
+    width: 1010px;
+    margin: 0 auto;
+}
+
+.right {
+    width: 250px;
+    float: right;
+}
+
+.errors {
+    margin-left: 30px;;
+    display: none;
+    margin-bottom: 30px;
+}
+
+.red, .errors div {
+    color: #ff0000;
+}
+
+.entry {
+    margin-bottom: 30px;
+    border-left: 4px solid #f5f5f5;
+    padding-left: 16px;
+}
+
+.pagination, .profile {
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
+.code {
+    padding-left: 25px;
+}
+
+#uploadForm {
+    padding-left: 20px;;
+}
+
+.label {
+    margin-bottom: 20px;
+}
+
+.labelText {
+    width: 110px;
+    display: block;
+    float: left;
+}
+
+.input {
+    width: 250px;
+}
+
+.title {
+    color: purple;
+    padding-right: 3px;
+}
+
+.linkTitle {
+    color: #7A7A2B;
+    padding-right: 3px;
+}
+
+.topLink {
+    width: 180px;
+    display: inline-block;
+}
+
+textarea.description {
+    height: 80px;
+}
+
+.green, .value {
+    color: #008000;
+}
+
+.function, .value {
+    padding-left: 13px;
+}
+
+.image {
+    padding: 10px 0 10px 45px;
+}
+
+.image .econom {
+    cursor: pointer;
+}
+
+.image img, .image video {
+    max-width: 680px
+}
+
+.var {
+    font-weight: bolder;
+    color: #000080;
+}
+
+.comment, .greyText {
+    color: #808080 !important;
+}
+
+.jslink {
+    width: 100%;
+    display: block;
+    color: black;;
+    text-decoration: none;
+}
+
+.jslink:hover {
+    background-color: #87ceeb;
+}
+
+.logo {
+    width: 250px;
+    float: left;
+}
+
+.logo img {
+    margin: 22px;
+}
+
+#scrollToTop {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    background: none;
+    font-size: 12px;
+    display: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#scrollToTop img {
+    padding: 5px;
+}
+
+#scrollToTop.little {
+    left: 10px;
+    bottom: 10px;
+    border: 1px solid black;
+    opacity: 0.6;
+    background-color: rgba(245, 245, 245, 1) !important;
+    height: 28px;
+
+}
+
+#scrollToTop:hover {
+    cursor: pointer;
+    background-color: rgba(245, 245, 245, 0.34);
+}
+
+.currentEntry {
+    border-left: 4px solid #9dc5d3;
+    padding-left: 16px;
+}
+
+.modal {
+    background: #f5f5f5;
+    padding: 10px;
+    border: 3px solid #a9a9a9;
+    box-shadow: 2px 2px 5px 1px gray;
+}
+
+#keysHelp p {
+    margin: 3px;
+
+}
+
+.modal a.modalCloseImg {
+    background: url(/public/images/x.png) no-repeat; /* adjust url as required */
+    width: 25px;
+    height: 29px;
+    display: inline;
+    z-index: 3200;
+    position: absolute;
+    top: -15px;
+    right: -18px;
+    cursor: pointer;
+}
+
+.pageContent {
+    margin: 0 20px;
+}
+
+.pageTitle {
+    margin: 10px 20px;
+}
+
+.pageTitle a {
+    color: #808080;
+}
+
+#uploaded {
+    display: none;
+}
+
+.fileSize {
+    background-color: rgba(0, 0, 0, 0.52);
+    margin-top: -19px;
+    color: #f5f5f5;
+    font-size: 12px;
+    z-index: 1000;
+    position: relative;
+    height: 15px;
+    width: 55px;
+    text-align: right;
+    padding-right: 3px;
+}
+
+.searchForm {
+    position: absolute;
+    margin-left: 550px;
+    margin-top: 3px;
+}
+
+.searchForm .phrase {
+    width: 180px;
+    height: 17px;
+    padding: 2px 20px 2px 2px;
+    border: 2px solid #bfbfbf;
+    font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.submitSearch {
+    width: 15px;
+    height: 15px;
+    opacity: 0.6;
+    margin-left: 185px;
+    position: absolute;
+    margin-top: 5px;
+}
+
+.submitSearch:hover {
+    opacity: 1;
+}
+
+.footer {
+    text-align: center;
+    height: 100px;
+    background-color: #e0e0e0;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.copyright {
+    float: left;
+}
+
+.leftFooter {
+    float: left;
+    margin-left: 15px;
+    clear: both;
+}
+
+.rightSide {
+    float: right;
+    margin-right: 5px;
+    clear: both;
+}
+
+.footer .footerRight {
+    float: right;
+}
+
+.topRightBanner {
+    position: absolute;
+    width: 468px;
+    margin-left: 20px;
+}
+
+.rightBanner, .customWidget {
+    margin: 5px 5px 0 5px;
+}
+
+.autofill .edit, .autofill .remove {
+    font-weight: bolder;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.autofill .edit:hover, .autofill .remove:hover {
+    opacity: 1;
+}
+
+#loginForm {
+    width: 160px;
+}
+
+.loginFormInput {
+    width: 155px;
+}
+
+#loginForm h4 {
+    margin: 5px 0;
+}
+
+.unsocial a {
+    color: #808080;
+    text-decoration: none;
+    border-bottom: 1px dashed #808080;
+}
+
+.unsocialForm {
+    margin-top: 10px;
+}
+
+.simplemodal-overlay {
+    background-color: black;
+}
+
+.passwordagain {
+    display: none;
+}
+
+.logininfo {
+    position: absolute;
+    margin-left: 180px;
+    margin-top: -40px;
+    display: none;
+    width: 150px;
+}
+
+#userpanel {
+    position: absolute;
+    display: none;
+    margin: 3px;
+    background-color: #f5f5f5;
+    border: 1px solid grey;
+}
+
+#userpanel .nickname a {
+    padding-left: 2px;
+    color: #808080;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+#userpanel .exit {
+    cursor: pointer;
+    padding: 0 2px;
+    border-left: 1px solid grey;
+}
+
+#userpanel .exit:hover {
+    font-weight: bold;
+}
+
+#loginbutton {
+    position: absolute;
+    margin: 3px;
+    cursor: pointer;
+    border-bottom: 1px dotted #808080;
+    display: none;
+}
+
+#loginbutton:hover {
+    border-bottom: 1px solid #808080;
+}
+
+.loading {
+    width: 16px;
+    height: 16px;
+    background: url("/public/images/loader_small.gif") no-repeat;
+    position: absolute;
+    margin-top: 4px;
+}
+
+.captcha {
+    display: none;
+}
+
+.captcha .captchaImg {
+    float: left;
+    margin: 3px 0 3px 1px;
+}
+
+.captcha .refresh {
+    cursor: pointer;
+    margin-left: 3px;
+    margin-top: 17px;
+}
+
+#addcomment .text {
+    width: 450px;
+    height: 120px;
+}
+
+#addcomment .tags span {
+    cursor: pointer;
+    border-bottom: 1px dotted;
+}
+
+#addcomment .tags span:hover {
+    cursor: pointer;
+    border-bottom: 1px solid;
+}
+
+#addcomment .answer, #addcomment .editComment {
+    display: none;
+    background-color: #cccccc;
+    padding: 5px;
+    color: #808080;
+    width: 445px;
+    margin-bottom: 15px;
+}
+
+#addcomment .answer img, #addcomment .editComment img {
+    max-width: 100%;
+}
+
+#addcomment .close {
+    float: right;
+    cursor: pointer;
+}
+
+#addcomment .submitLabel {
+    margin-left: 20px;
+}
+
+#addcomment .close:hover {
+    font-weight: bold;
+}
+
+#comments {
+    margin-right: 10px;
+}
+
+#comments .nocomments {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.italic {
+    font-style: italic;
+}
+
+#comments .comment {
+    border-left: 1px dotted #cccccc;
+    padding-left: 15px;
+}
+
+#comments .answerLink {
+    float: right;
+    margin-right: 10px;
+}
+
+#comments .comment .text, .parentTooltip, .answer .content, .editComment .editContent, .breakWord {
+    word-wrap: break-word;
+}
+
+#comments .comment .text img {
+    max-width: 100%;
+    display: block;
+}
+
+#comments .comment .hiddenComment {
+    color: #5190B8;
+    cursor: pointer;
+    border-bottom: 1px dotted #5190B8;
+    opacity: 0.6;
+}
+
+#comments .comment .hiddenComment:hover {
+    border-bottom: 1px solid;
+    opacity: 1;
+}
+
+.author a {
+    text-decoration: none;
+    color: #808080;
+}
+
+.author a:hover {
+    border-bottom: 1px solid;
+}
+
+#comments .comment .head, #comments .comment .answer, #comments .comment .deleted {
+    font-size: 12px;
+}
+
+#comments .comment .head span {
+    margin-right: 5px;
+}
+
+#comments .comment .answer {
+    color: #5190B8;
+    cursor: pointer;
+    border-bottom: 1px dotted #5190B8;
+    margin-bottom: 15px;
+}
+
+#comments .comment .foot {
+    padding-bottom: 8px;
+}
+
+#comments .comment .commentsCount {
+    font-size: 10px;
+}
+
+#comments .comment .footBox {
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+#comments .comment .voteFor, #comments .comment .voteAgainst {
+    cursor: pointer;
+    padding: 2px 5px;
+}
+
+#comments .comment .voteFor:hover, #comments .comment .voteAgainst:hover {
+    background-color: #87ceeb;
+}
+
+#comments .comment .head {
+    padding-top: 8px;
+    padding-bottom: 5px;
+    white-space: nowrap;
+}
+
+#comments .comment .selectedComment .head {
+    border-top: 4px solid lightblue;
+    padding-top: 4px;
+}
+
+#comments .comment .selectedComment .foot {
+    border-bottom: 4px solid lightblue;
+    padding-bottom: 4px;
+}
+
+#comments .comment .answer:hover {
+    border-bottom: 1px solid;
+}
+
+#comments .comment .folding {
+    border: 1px solid grey;
+    padding: 0 2px;
+    cursor: pointer;
+    display: none;
+    font-size: 8px;
+    margin-right: 5px;
+    margin-left: -3px;
+}
+
+.parentTooltip {
+    position: absolute;
+    background-color: #f5f5f5;
+    border: 1px solid grey;
+    padding: 5px;
+    width: 300px;
+}
+
+.parentArrow {
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    position: absolute;
+    margin-left: 530px;
+    display: none;
+    width: 25px;
+
+}
+
+.parentArrow .triangleleft {
+    width: 0;
+    border: 6px solid;
+    margin-top: -6px;
+    margin-left: -10px;
+    border-color: transparent white transparent transparent;
+}
+
+.commentsByDate, .commentsByRating {
+    cursor: pointer;
+    border-bottom: 1px dotted;
+}
+
+.commentsByDate.selected, .commentsByRating.selected {
+    border: none;
+    font-weight: bolder;
+}
+
+.deleteCommentForm input {
+    font-size: 10px;
+    height: 12px;
+    padding: 0;
+}
+
+.deleteCommentForm input.deleteComment, .restoreCommentButton {
+    font-size: 10px;
+    height: 20px;
+    padding: 0;
+}
+
+.deleteCommentForm {
+    display: inline-block;
+}
+
+#usersettings {
+    width: 740px;
+    margin: 10px;
+}
+
+#usersettings td {
+    vertical-align: top;
+    padding: 4px;
+
+}
+
+#usersettings td {
+    border-bottom: 1px dotted #808080;
+}
+
+#usersettings td:nth-child(odd) {
+    width: 200px;
+}
+
+#usersettings .linkedAccount {
+    padding: 5px;
+}
+
+#usersettings .linkedAccount:hover {
+    background-color: #dedede;
+}
+
+#usersettings .linkedAccount .name {
+    width: 300px;
+    display: inline-block;
+}
+
+#usersettings .linkedAccount .delete:hover {
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.widgetComment {
+
+}
+
+.linkedAccount .delete {
+    float: right;
+}
+
+#settingsLink {
+    float: right;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 12px;
+    font-weight: normal;
+    border-bottom: 1px dotted;
+}
+
+#settingsLink:hover {
+    border-bottom: 1px solid;
+}
+
+.listEl {
+    margin: 10px 0;
+    padding: 4px;
+    border-bottom: 1px dotted #d9d9d9;
+}
+
+.listEl:hover {
+    background-color: #d9d9d9;
+}
+
+.commentText img {
+    display: block;
+    max-width: 100%;
+}
+
+/* MEMS */
+
+#mem {
+    width: 500px;
+    padding: 0 25px;
+    margin-right: 300px;
+    max-height: 500px;
+}
+
+#mem .img {
+    max-width: 500px;
+    max-height: 500px;
+    display: block;
+}
+
+#mem .upperText, #mem .downText {
+    font-size: 52px;
+    position: absolute;
+    text-align: center;
+    width: 350px;
+    padding-left: 25px;
+    font-family: Impact;
+    line-height: 1.15;
+    color: white;
+    overflow: hidden;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    max-height: 400px;
+}
+
+#mem .upperText {
+
+}
+
+#mem .downText {
+    margin-top: -67px;
+}
+
+#memSettings {
+    width: 600px;
+    height: 100px;
+    margin: 30px 15px;
+    padding: 0
+
+}
+
+#memSettings .upperText, #memSettings .downText {
+    height: 30px;
+    font-size: 24px;
+    margin: 5px;
+    padding: 3px;
+    width: 200px;
+    float: left;
+}
+
+#memSettings .upperTextSize, #memSettings .downTextSize, #memSettings .createAdvice {
+    height: 40px;
+    float: left;
+    margin: 5px;
+    font-size: 24px;
+}
+
+#memSettings .upperTextSize, #memSettings .downTextSize {
+    width: 60px;
+}
+
+#memTemplates {
+    padding: 10px;
+    overflow: auto;
+    height: 520px;
+    background-color: white;
+    border: 1px solid #808080;
+    margin: 20px;
+}
+
+.templateCollapsed {
+    height: 160px !important;
+}
+
+#templateToggle {
+    float: right;
+    cursor: pointer;
+}
+
+.memTemplate {
+    margin: 8px;
+    border: 0px solid grey;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    float: left;
+    cursor: pointer;
+}
+
+.memTemplate img {
+    height: 150px;
+    width: 150px;
+    display: block;
+}
+
+/*tabs*/
+
+.box {
+    display: none;
+}
+
+.box.visible {
+    display: block;
+}
+
+.tabsContainer {
+    width: 100%;
+    background: #EFEFEF;
+    margin: 0 0 30px;
+}
+
+ul.tabs {
+    height: 28px;
+    line-height: 25px;
+    list-style: none;
+    border-bottom: 1px solid #DDD;
+    background: #FFF;
+}
+
+.tabs li {
+    float: left;
+    display: inline;
+    margin: 0 1px -1px 0;
+    padding: 0 13px 1px;
+    color: #777;
+    cursor: pointer;
+    background: #F9F9F9;
+    border: 1px solid #E4E4E4;
+    border-bottom: 1px solid #F9F9F9;
+    position: relative;
+}
+
+.tabs li:hover,
+.vertical .tabs li:hover {
+    color: #F70;
+    padding: 0 13px;
+    background: #FFFFDF;
+    border: 1px solid #FFCA95;
+}
+
+.tabs li.current {
+    color: #444;
+    background: #EFEFEF;
+    padding: 0 13px 2px;
+    border: 1px solid #D4D4D4;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+.box {
+    display: none;
+    border: 1px solid #D4D4D4;
+    border-width: 0 1px 1px;
+    background: #EFEFEF;
+    padding: 0 12px;
+}
+
+.box.visible {
+    display: block;
+}
+
+.contentTable {
+    border: 2px 0;
+    vertical-align: top;
+}
+
+.contentTable td {
+    border-bottom: 1px dashed #a9a9a9;
+    vertical-align: top;
+    padding: 10px;
+}
+
+.contentTable tr {
+
+}
+
+.spoiler {position:relative;} .spoiler a.spoiler-head {border-bottom: 1px dotted; margin:10px 0 2px 0; text-decoration:none;} .spoiler a.spoiler-head span {padding:0; border-bottom:dashed 1px #71C83B; font-size:16px; color:#71C83B;} .spoiler .spoiler-body {display:none; position:relative; padding:6px 0 0 0; margin:0; clear:both;}
+
+.play-button{
+    margin-left: -64px; margin-top: -64px; background-image: url('/public/images/play.png'); width: 128px; height: 128px;
+}
+
+.dashed{
+    border-bottom: 1px dashed;
+}
+
+/**
+* Common
+**/
+.normalVerticalMargin {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.normalHPadding{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.smallVPadding, .smallPadding{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.smallVMargin{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.smallHPadding, .smallPadding{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.largeInputHeight {
+    height: 24px;
+}
+
+.largestInputHeight {
+    height: 30px;
+}

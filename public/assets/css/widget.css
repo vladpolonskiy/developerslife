@@ -1,0 +1,48 @@
+.widget {
+    margin: 5px 5px 0 5px;
+    padding: 5px;
+    width: 230px;
+    background-color: #f5f5f5;
+}
+
+.widget .header {
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.widgetComment img {
+    max-width: 100%;
+}
+
+.widgetComment {
+    padding: 4px;
+}
+
+.widgetComment:hover {
+    background-color: #d9d9d9;
+}
+
+.widgetComment .commentLink {
+    text-decoration: none;
+}
+
+.widgetComment .fullText {
+    display: none;
+}
+
+.widgetComment .fullText, .widgetComment .cutText {
+    word-wrap: break-word;
+}
+
+.widgetComment .showFullComment, .widgetComment .showCutComment {
+    text-decoration: none;
+    float: right;
+
+}
+
+.widgetComment .showFullComment:hover, .widgetComment .showCutComment:hover {
+}
+
+.widgetComment .showCutComment {
+    display: none;
+}
