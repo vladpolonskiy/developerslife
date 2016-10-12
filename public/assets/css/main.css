@@ -23,12 +23,26 @@ body, .pure-g [class *= "pure-u"],
 
 }
 
+.headerToolbar {
+    padding-top: 50px;
+    margin-left: 250px;
+}
+
+.headerToolbar ul {
+    list-style: none;
+    width: 350px;
+}
+
+.content {
+    clear: left;
+}
+
 .entryLink {
     text-decoration: none;
     color: black;
 }
 
-.entryLink:hover {
+a.entryLink:hover {
     text-decoration: underline;
 }
 
@@ -41,11 +55,15 @@ body, .pure-g [class *= "pure-u"],
 #site {
     width: 1010px;
     margin: 0 auto;
+    position: relative;
 }
 
 .right {
     width: 250px;
     float: right;
+    position: fixed;
+    top: 0;
+    right: 445px;
 }
 
 .errors {
@@ -62,6 +80,14 @@ body, .pure-g [class *= "pure-u"],
     margin-bottom: 30px;
     border-left: 4px solid #f5f5f5;
     padding-left: 16px;
+}
+
+.entry > .comment {
+    font-size: 12px; 
+}
+
+.entry .entryHeader {
+    opacity: .6;
 }
 
 .pagination, .profile {
@@ -148,6 +174,7 @@ textarea.description {
     display: block;
     color: black;;
     text-decoration: none;
+    cursor: default;
 }
 
 .jslink:hover {
