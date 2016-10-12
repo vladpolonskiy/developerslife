@@ -1,8 +1,8 @@
 import {FETCH_ENTRIES_SUCCESS} from '../constants';
 
-export default category(state = 'latest', action) {
+export default function category(state = 'latest', action) {
 	switch (action.type) {
-		case FETCH_NEWS_SUCCESS:
+		case FETCH_ENTRIES_SUCCESS:
 			return action.category;
 
 		default:
