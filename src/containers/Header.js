@@ -10,24 +10,45 @@ class Header extends React.Component {
 		this._handleClick = this._handleClick.bind(this);
 	}
 
+	shouldComponentUpdate(nextProps) {
+		return (this.props.pageSize !== nextProps.pageSize) || (this.props.currentEntry.id !== nextProps.currentEntry.id);
+	}
+
+	componentWillReceiveProps(nextProps) {
+		if ( (!!this.props.currentEntry.id && !!nextProps.currentEntry.id) && 
+					this.props.currentEntry.id !== nextProps.currentEntry.id &&
+					location.pathname !== `/entries/${nextProps.currentEntry.id}`) {
+			this.context.router.push(`/entries/${nextProps.currentEntry.id}`);
+		} 
+	}
+
 	_handleClick(e) {
-		switch (e.currentTarget.getAttribute("name")) {
+		let {actions, pageSize} = this.props;
+		let category = e.currentTarget.getAttribute("name");
+
+		switch (category) {
 			case 'latest':
-				break;
-
-			case 'top': 
-				break;
-
+			case 'top':
 			case 'hot':
+				actions.fetchEntries(category, 0, pageSize);
+				this.context.router.push('/entries');
 				break;
 
 			case 'random':
+				actions.fetchEntryRandom();
 				break;
 
 			default:
 				break;
 		}
+
+		
 	}
+
+	// Enable context
+	static contextTypes = {
+		router: React.PropTypes.object.isRequired
+	};
 
 	render() {
 		return (
@@ -70,10 +91,7 @@ class Header extends React.Component {
 
 let mapStateToProps = (state) => ({
 	entries: state.entries,
-	viewMode: state.viewMode,
-	pageNum: state.pageNum,
 	pageSize: state.pageSize,
-	category: state.category,
 	currentEntry: state.currentEntry
 });
 

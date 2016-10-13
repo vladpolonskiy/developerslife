@@ -33,6 +33,15 @@ export function fetchEntry(entryId, entries = []) {
 	};
 }
 
+// Fetching random entry 
+export function fetchEntryRandom() {
+	return (dispatch) => {
+		return axios.get('http://developerslife.ru/random?json=true')
+						.then( (result) => dispatch({type: FETCH_ENTRY_SUCCESS, entry: result.data}) )
+						.catch( (error) => dispatch({type: FETCH_ENTRY_ERROR, error: error}) );
+	};
+}
+
 // Chenge view mode
 export function changeViewMode(viewMode) {
 	return {type: CHANGE_VIEW_MODE, viewMode };

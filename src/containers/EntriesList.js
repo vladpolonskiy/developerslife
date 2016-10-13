@@ -20,6 +20,14 @@ class EntriesList extends React.Component {
 				header = '// Последние';
 				break;
 
+			case 'top':
+				header = '// Лучшие';
+				break;
+
+			case 'hot':
+				header = '// Горячие';
+				break;
+
 			default:
 				break;
 		}
