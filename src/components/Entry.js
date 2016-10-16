@@ -4,7 +4,7 @@ import {Link} from 'react-router';
 export default class Entry extends React.Component {
 
 	shouldComponentUpdate(nextProps) {
-		return nextProps.id !== this.props.id;
+		return nextProps.id !== this.props.id || nextProps.viewMode !== this.props.viewMode;
 	}
 
 	render() {

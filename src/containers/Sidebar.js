@@ -9,7 +9,7 @@ class Sidebar extends React.Component {
 	}
 
 	render() {
-		let {actions, pageSize, viewMode, pageNum, category} = this.props;
+		let {actions, pageSize, viewMode, category} = this.props;
 		let defaultEconom = viewMode === 'econom' ? true : false;
 		let defaultCharge = viewMode === 'charge' ? true : false;
 
@@ -19,7 +19,7 @@ class Sidebar extends React.Component {
 					<div className="header comment">Записей на странице:</div>
 					<div className="pure-form">
         				<form>
-							<select onChange={(e) => {actions.fetchEntries(category, pageNum, e.target.value)}} defaultValue={pageSize} name="entriesOnPage" size="1" className="countSelector pure-u-1">
+							<select onChange={(e) => {actions.fetchEntries(category, 0, e.target.value)}} defaultValue={pageSize} name="entriesOnPage" size="1" className="countSelector pure-u-1">
 							    <option value="5">5 записей</option>
 							    <option value="10">10 записей</option>
 							    <option value="15">15 записей</option>
@@ -42,7 +42,6 @@ class Sidebar extends React.Component {
 
 let mapStateToProps = (state) => ({
 	category: state.category,
-	pageNum: state.pageNum,
 	pageSize: state.pageSize,
 	viewMode: state.viewMode
 });

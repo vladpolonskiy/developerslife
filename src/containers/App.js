@@ -6,8 +6,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="app">
-          {this.props.children}
-          <Sidebar />
+      	<Sidebar />
+        {this.props.children}  
       </div>
     );
   }

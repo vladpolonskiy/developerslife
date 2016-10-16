@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import * as actionCreators from '../actions/index';
 import Entry from '../components/Entry';
 import Header from './Header';
+import Pagination from '../components/Pagination';
 
 class EntriesList extends React.Component {
 	componentWillMount() {
@@ -12,7 +13,7 @@ class EntriesList extends React.Component {
 	}
 
 	render() {
-		let {entries, category, viewMode} = this.props,
+		let {entries, category, viewMode, pageNum, pageSize, pageCount, actions} = this.props,
 			header = null;
 
 		switch (category) {
@@ -38,6 +39,7 @@ class EntriesList extends React.Component {
 				<div className="content">
 					<h3 className="comment pageTitle">{header}</h3>
 					{entries.map( (entry) => <Entry {...entry} key={entry.id} viewMode={viewMode} /> )}
+					<Pagination pageWalk={actions.fetchEntries} category={category} pageSize={pageSize} pageNum={pageNum} pageCount={pageCount} />
 				</div>
 			</div>
 		);
@@ -48,6 +50,7 @@ let mapStateToProps = (state) => ({
 	entries: state.entries,
 	category: state.category,
 	pageNum: state.pageNum,
+	pageCount: state.pageCount,
 	pageSize: state.pageSize,
 	viewMode: state.viewMode
 });

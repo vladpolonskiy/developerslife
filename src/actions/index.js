@@ -11,7 +11,17 @@ import axios from 'axios';
 export function fetchEntries(category, pageNum, pageSize) {
 	return (dispatch) => {
 		return axios.get(`http://developerslife.ru/${category}/${pageNum}?json=true&pageSize=${pageSize}&types=gif`)
-						.then( (result) => dispatch({type: FETCH_ENTRIES_SUCCESS, entries: result.data.result, category, pageNum, pageSize}) )
+						.then((result) => {
+							let action = {
+								type: FETCH_ENTRIES_SUCCESS,
+								entries: result.data.result,
+								pageCount: parseInt((result.data.totalCount / pageSize).toFixed(), 10) - 1,
+								category,
+								pageNum,
+								pageSize
+							};
+							return dispatch(action);
+						})
 						.catch( (error) => dispatch({type: FETCH_ENTRIES_ERROR, error: error}) );
 	};
 }

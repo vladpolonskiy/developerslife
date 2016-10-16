@@ -62,9 +62,6 @@ a.entryLink:hover {
 .right {
     width: 250px;
     float: right;
-    position: fixed;
-    top: 0;
-    right: 445px;
 }
 
 .errors {
